@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-color: #5c5c5c;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    transition: .5s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.logo:hover {
+    color: #d8571b;
+    cursor: pointer;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #d8571b;
+    
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    color: #fff;
+    font-size: 56px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 1.1s ease forwards;
+}
+
+.home-content h3 {
+    color: #fff;
+    font-size: 32px;
+    opacity: 0;
+    animation: slideLeft 1.1s ease forwards;
+}
+
+.home-content h1 span {
+    color: #fff;
+    transition: 0.6s;
+}
+
+.home-content h1 span:hover {
+    color: #d8571b;
+    cursor: pointer;
+}
+
+.home-content p {
+    color: #fff;
+    font-size: 16px;
+    margin: 15px 0;
+    opacity: 0;
+    animation: slideTop 1.1s ease forwards;
+}
+
+.home-content li {
+    color: #fff;
+    opacity: 0;
+    animation: slideLeft 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.btn {
+    display: inline-block; /* Ensure they behave like block elements */
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #d8571b;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #333;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1.5s ease forwards;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 20px #fff;
+}
+
+.home-img img {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 45%;
+    pointer-events: none;
+    opacity: 0;
+    animation: slideTop 1.5s ease forwards;
+    filter: drop-shadow(31px 5px 10px #000000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* keyframes */
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+ } 
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+ } 
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+ } 
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+ } 
+}
+
+@keyframes zoomIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+  }
+
+  100%{
+    transform: scale(1);
+    opacity: 1;
+ } 
+}
